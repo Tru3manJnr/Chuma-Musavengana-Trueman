@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home - Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- FontAwesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="skills.html">Technical Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="home-container">
+            <div class="photo-container">
+                <img src="WhatsApp Image 2025-05-23 at 09.20.55_0e366c51.jpg" alt="Your Name" class="profile-photo" />
+            </div>
+            <div class="intro-text">
+                <h2>Introduction</h2>
+                <p>My name is Musavengana Trueman Chuma. I have a strong passion for technology, with a focus on Computer Science, Cybersecurity, and Artificial Intelligence. I’m deeply interested in how intelligent systems can be developed and secured to solve real-world problems. I enjoy exploring new innovations in AI, understanding the principles of secure computing, and applying my knowledge to build smarter, safer digital solutions. I’m committed to continuous learning and growth in these rapidly evolving fields.</p>
+                <h2>Mission Statement</h2>
+                <p>My mission is to leverage the power of technology—particularly in computer science, cybersecurity, and artificial intelligence—to create innovative, secure, and intelligent solutions that address real-world challenges. I strive to grow continuously as a professional, contribute meaningfully to the advancement of digital systems, and promote a safer, smarter, and more connected world through ethical and impactful innovation.</p>
+                <button id="openModalBtn" class="btn-contact">Help</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h2>Help Search</h2>
+            <form id="helpForm">
+                <label for="searchQuery">Search the web:</label>
+                <input type="text" id="searchQuery" name="searchQuery" placeholder="Enter your query here" required />
+                <button type="submit" class="btn-submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

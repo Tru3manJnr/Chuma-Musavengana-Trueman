@@ -1,0 +1,342 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Basic reset and typography */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #222;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #add8e6; /* light blue */
+    color: #222;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 1.5rem;
+}
+
+header nav ul li a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #0070f3;
+    text-decoration: underline;
+}
+
+section {
+    padding: 3rem 1.5rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #C0C0C0; /* silver grey */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+section:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+h1, h2, h3 {
+    color: #111;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover {
+    color: #0070f3;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.photo-container {
+    flex: 1 1 200px;
+    max-width: 250px;
+}
+
+.profile-photo {
+    width: 100%;
+    border-radius: 50%;
+    border: 4px solid #0070f3;
+    box-shadow: 0 4px 15px rgba(0,112,243,0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+.intro-text {
+    flex: 2 1 400px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skills-list li {
+    background-color: #e1eaff;
+    color: #003a75;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.skills-list li:hover {
+    background-color: #c0d4ff;
+}
+
+.skills-list li i {
+    font-size: 1.2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #222;
+    color: #fff;
+    width: 100%;
+    margin-top: auto;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+a {
+    color: #0070f3;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0051a2;
+}
+
+/* Contact section improvements */
+#contact p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+#contact a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    section {
+        margin: 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .home-container {
+        gap: 1rem;
+    }
+}
+
+/* Cursor follower styles */
+.cursor-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0, 112, 243, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease, transform 0.15s ease;
+    z-index: 9999;
+}
+
+/* Background canvas styles */
+#background-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 10000; /* On top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #000;
+}
+
+#contactForm label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+#contactForm textarea {
+    font-family: inherit;
+}
+
+.btn-contact {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 11000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Ensure the profile photo container is positioned relatively to contain the button */
+.photo-container {
+    position: relative;
+}
+
+.btn-contact:hover {
+    background-color: #005bb5;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.btn-submit {
+    margin-top: 1.5rem;
+    padding: 0.7rem 1.5rem;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #005bb5;
+}
